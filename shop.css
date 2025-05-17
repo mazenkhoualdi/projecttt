@@ -6,6 +6,7 @@ body {
   padding: 0px;
   margin: 0;
   height: 100vh;
+  overflow-x: hidden;
 }
 header {
   display: flex;
@@ -75,6 +76,7 @@ footer {
   font-style: italic;
   font-weight: 500;
 }
+
 .media a {
   height: 40px;
   width: 40px;
@@ -114,8 +116,10 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   height: 250px;
-  width: 1299px;
+  width: 100%;
+  /*width: 1299px;*/
 }
+
 .mini-titles {
   display: flex;
   flex-direction: column;
@@ -186,13 +190,17 @@ footer {
 }
 .modal-dialog {
   background-color: #d8c1df;
-  width: 600px;
+  /*width: 600px;
   margin-left: 400px;
-  margin-top: 40px;
+  margin-top: 40px;*/
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
   padding-left: 10px;
   border: 3px solid #045cff;
   border-radius: 10px;
 }
+
 .total-count {
   color: #2264ff;
   font-size: large;
@@ -281,4 +289,46 @@ model-viewer:hover {
 .money {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 768px) {
+  header, footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shop-back {
+    height: auto;
+    padding: 20px;
+  }
+
+  .modal-dialog {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .money {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .prd {
+    width: 90%;
+    margin: 10px 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
