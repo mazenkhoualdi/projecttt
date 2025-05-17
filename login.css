@@ -281,58 +281,171 @@ font-style: italic;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 color: #495df3;
 }
+/* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
-  header, footer {
-    flex-direction: column;
-    text-align: center;
-    padding: 10px;
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
   }
-
+  
+  header {
+    flex-direction: column;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+  }
+  
   nav ul {
     flex-direction: column;
-  }
-
-  nav ul li {
     padding: 10px 0;
+    width: 100%;
   }
-
+  
+  nav ul li {
+    padding: 8px 0;
+    width: 100%;
+  }
+  
   .container {
-    flex-direction: column;
-    width: 95%;
-    height: auto;
     margin: 20px auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
   }
-
-  .overlay-container,
-  .overlay-left,
-  .overlay-right,
+  
   .singup,
   .singin {
+    position: relative;
     width: 100% !important;
-    position: static !important;
-    transform: none !important;
-    height: auto !important;
+    height: auto;
+    left: 0;
   }
-
+  
   form {
     padding: 20px;
+    box-sizing: border-box;
   }
-
+  
+  input {
+    width: calc(100% - 30px) !important; /* Full width minus padding */
+    margin: 8px 0 !important;
+    box-sizing: border-box;
+  }
+  
+  .overlay-container {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .overlay-left,
+  .overlay-right {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    transform: none !important;
+    text-align: center;
+  }
+  
   button {
-    padding: 12px 25px;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
   }
-
-  .social-media {
-    flex-wrap: wrap;
-    justify-content: center;
+  
+  footer {
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
   }
-
-  .media a {
-    margin: 5px;
-  }
-
+  
   .info {
     padding-top: 20px;
+    width: 100%;
+  }
+  
+  .social-media {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Specific fixes for your form elements */
+  .container.right-panel-active .singin,
+  .container.right-panel-active .singup {
+    transform: none !important;
+  }
+  
+  .container.right-panel-active .overlay-container {
+    transform: none !important;
+  }
+  
+  .container.right-panel-active .overlay {
+    transform: none !important;
+  }
+  .overlay button {
+    width: 80%;
+    max-width: 250px;
+    margin: 15px auto;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+
+  .overlay-left,
+  .overlay-right {
+    justify-content: flex-start;
+    padding-top: 40px;
   }
 }
 
+/* Small Mobile Devices (additional fixes) */
+@media (max-width: 480px) {
+  form {
+    padding: 15px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 0.9rem;
+  }
+  
+  input {
+    padding: 10px 12px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .social-media a {
+    height: 35px;
+    width: 35px;
+    margin: 5px;
+  }
+  .overlay button {
+    width: 90%;
+    padding: 10px 15px;
+    font-size: 0.8rem;
+  }
+
+  .overlay-left, 
+  .overlay-right {
+    padding-top: 30px;
+  }
+}
