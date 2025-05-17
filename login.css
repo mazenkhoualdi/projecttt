@@ -1,0 +1,263 @@
+* {
+  margin: 0px;
+}
+body {
+  font-family: Arial, sans-serif;
+  padding: 0px;
+  margin: 0;
+  height: 100vh;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e3e6f8;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 15px 15px 115px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  padding-right: 20px;
+  padding-left: 20px;
+  list-style-type: none;
+}
+nav ul li a {
+  text-decoration: none;
+  font-weight: 650;
+  color: #2c3e80;
+}
+nav ul li a:hover {
+  color: #2443f1;
+}
+.container {
+  position: relative;
+  margin-left: 250px;
+  margin-top: 50px;
+  width: 840px;
+  height: 450px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden; /*ki tokhrej mel cadre*/
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.singup,
+.singin {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  transition: all 0.6s ease-in-out; /*type de transition de données*/
+}
+.singup {
+  width: 50%; /*chtar container*/
+  z-index: 1;
+}
+.singin {
+  width: 50%; /*chtar container*/
+  z-index: 2; /*lorsque les blok fou9 bathhom li andou index akther howa loul*/
+}
+
+form {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+h1 {
+  font-weight: bold;
+  margin: 0px;
+}
+p {
+  font-size: 14px;
+  letter-spacing: 0.6px;
+  margin: 15px 0px 20px;
+}
+input {
+  background: #eee;
+  padding: 12px 15px;
+  margin: 8px 15px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+}
+a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0px;
+}
+button {
+  color: #fff;
+  background: #0734ff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 55px;
+  margin: 20px;
+  border-radius: 30px;
+  border: 3px solid #0421ff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+button:active {
+  transform: scale(0.9);
+}
+#sing-in,
+#sing-up {
+  background-color: transparent;
+  border: 3px solid #fff;
+}
+.container.right-panel-active .singin {
+  transform: translateX(100%);
+}
+.container.right-panel-active .singup {
+  transform: translateX(100%);
+  z-index: 5;
+}
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+.overlay {
+  position: relative;
+  color: #fff;
+  background-color: #5441ff;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  background: linear-gradient(to right, #01e7fc, #294ffa);
+  transition: transform 0.6s ease-in-out;
+}
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+.overlay-left,
+.overlay-right {
+  position: absolute;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 40px;
+  text-align: center;
+  height: 100%;
+  width: 50%;
+  transition: transform 0.6s ease-in-out;
+}
+.overlay-left {
+  transform: translateX(-20%);
+}
+.overlay-right {
+  right: 0px;
+}
+.social-media {
+  margin: 20px 0;
+}
+.social-media a {
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+}
+footer {
+  margin-top: 110px;
+  background-color: #e3e6f8;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e3e6f8;
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+.info {
+  padding-top: 80px;
+}
+.info h3 {
+  color: #03294d;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: large;
+}
+.info h3:hover {
+  color: #41d3c8;
+}
+.info li {
+  list-style-type: none;
+  padding-top: 10px;
+}
+.info ul li span {
+  color: #2944dd;
+  font-size: large;
+}
+.info li a {
+  text-decoration: none;
+  color: #000000;
+  font-style: italic;
+  font-weight: 500;
+}
+.media a {
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #000000;
+  transition: all 0.5s;
+}
+.paiment i {
+  padding-left: 20px;
+}
+.paiment i:hover {
+  color: #ff2273;
+}
+#ins:hover {
+  color: rgb(255, 0, 157);
+}
+#tw:hover {
+  color: rgb(12, 210, 255);
+}
+#fb:hover {
+  color: blue;
+}
+#twi:hover {
+  color: rgb(2, 10, 81);
+}
+#yt:hover {
+  color: red;
+}
+.head-9alba{
+    margin-top: 17px;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #495df3;
+}

@@ -1,0 +1,328 @@
+* {
+  margin: 0px;
+}
+body {
+  font-family: Arial, sans-serif;
+  padding: 0px;
+  margin: 0;
+  height: 100vh;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e3e6f8;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 15px 15px 115px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  padding-right: 20px;
+  padding-left: 20px;
+  list-style-type: none;
+}
+nav ul li a {
+  text-decoration: none;
+  font-weight: 650;
+  color: #2c3e80;
+}
+nav ul li a:hover {
+  color: #2443f1;
+}
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2b6cb0;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.ticket-types {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ticket-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.ticket-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.ticket-controls button {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: #2b6cb0;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-controls input {
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+}
+
+.price-summary {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.total-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2b6cb0;
+  margin-top: 1rem;
+}
+
+button[type="submit"] {
+  background: #2b6cb0;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 12px;
+}
+
+.receipt {
+  display: none;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  border: 2px solid #2b6cb0;
+}
+
+.receipt-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.receipt-details div {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.print-btn {
+  background: #2b6cb0;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+footer {
+  margin-top: 110px;
+  background-color: #e3e6f8;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e3e6f8;
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+.info {
+  padding-top: 80px;
+}
+.info h3 {
+  color: #03294d;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: large;
+}
+.info h3:hover {
+  color: #41d3c8;
+}
+.info li {
+  list-style-type: none;
+  padding-top: 10px;
+}
+.info ul li span {
+  color: #2944dd;
+  font-size: large;
+}
+.info li a {
+  text-decoration: none;
+  color: #000000;
+  font-style: italic;
+  font-weight: 500;
+}
+.media a {
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #000000;
+  transition: all 0.5s;
+}
+.paiment i {
+  padding-left: 20px;
+}
+.paiment i:hover {
+  color: #ff2273;
+}
+#ins:hover {
+  color: rgb(255, 0, 157);
+}
+#tw:hover {
+  color: rgb(12, 210, 255);
+}
+#fb:hover {
+  color: blue;
+}
+#twi:hover {
+  color: rgb(2, 10, 81);
+}
+#yt:hover {
+  color: red;
+}
+#img-back {
+  height: 280px;
+  width: 100%;
+  border-radius: 40px;
+  margin-top: 10px;
+}
+@media print {
+  body * {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .receipt,
+  .receipt * {
+    visibility: visible;
+  }
+
+  .receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+  }
+
+  .print-btn {
+    display: none;
+  }
+
+  .receipt-header h2 {
+    color: #000 !important;
+    font-size: 24pt;
+  }
+
+  .receipt-details {
+    font-size: 12pt;
+  }
+}
+.receipt-details {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.receipt-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.receipt-label {
+  min-width: 120px;
+  text-align: left;
+}
+
+.receipt-value {
+  text-align: right;
+  min-width: 80px;
+  font-family: "Courier New", monospace; /* Pour aligner les chiffres */
+}
+
+/* Version imprimable */
+@media print {
+  .receipt-line {
+    justify-content: space-between !important;
+  }
+
+  .receipt-value {
+    text-align: right !important;
+  }
+}

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+    <link rel="icon" href="images/ihec.png" />
+    <link rel="stylesheet" href="bot.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <a href=""
+        ><img
+          src="images/Musée-Salakta-2-removebg-preview.png"
+          alt="404"
+          style="width: 20%"
+          class="logo"
+      /></a>
+      <nav>
+        <ul id="list">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li>
+            <a href="login.html"><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li>
+            <a href="shop.html"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide custom-carousel"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/Salakta MUsem.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block"></div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/one.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block"></div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/second.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block"></div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <button id="chat-btn" class="chat-btn">
+      <i class="fa-solid fa-comment"></i>
+    </button>
+    <main>
+      <div id="chat-container" style="display: none">
+        <div id="chat-window"></div>
+        <div id="input-container">
+          <!-- Dans index.html, modifiez la section input -->
+          <div class="QNA">
+            <input
+              type="text"
+              id="user-input"
+              placeholder="Posez une question..."
+            />
+            <button id="voice-btn" class="voice-btn">
+              <i class="fas fa-microphone"></i>
+            </button>
+            <button id="send-btn" style="margin-left: 5px">Envoyer</button>
+          </div>
+          <div class="rating">
+            <div id="rating-container">
+              <i class="fa-solid fa-star star" data-value="1"></i>
+              <i class="fa-solid fa-star star" data-value="2"></i>
+              <i class="fa-solid fa-star star" data-value="3"></i>
+              <i class="fa-solid fa-star star" data-value="4"></i>
+              <i class="fa-solid fa-star star" data-value="5"></i>
+            </div>
+            <p class="rating-message"></p>
+          </div>
+        </div>
+      </div>
+      <section class="py-5 text-center container cnttt">
+        <div class="row py-lg-3">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <p class="lead text-muted"></p>
+          </div>
+        </div>
+      </section>
+
+      <div class="card-group">
+        <div class="card">
+          <img src="images/to7fa1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Punic Funerary Statuettes</h5>
+            <p class="card-text">
+              A collection of terracotta votive figurines, discovered at
+              Salakta, depicting mythological scenes and funerary rituals from
+              the Punic period. A poignant testament to spirituality and ancient
+              art.
+            </p>
+            <div class="card-cont">
+              <button>
+                <a
+                  href="https://www.facebook.com/photo/?fbid=122136209288190753&set=a.122106889124190753"
+                  >Read More</a
+                >
+              </button>
+            </div>
+          </div>
+          <div class="card-footer"></div>
+        </div>
+        <div class="card">
+          <img src="images/to7fa2.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Statuettes from Antiquity</h5>
+            <p class="card-text">
+              A selection of terracotta statuettes depicting female, male, and
+              divine figures. Excavated at Salakta, they illustrate the region's
+              religious and artistic practices during the Punic and Roman
+              periods.
+            </p>
+            <div class="card-cont">
+              <button>
+                <a
+                  href="https://www.facebook.com/photo/?fbid=122134859792190753&set=a.122118192104190753"
+                  >Read More</a
+                >
+              </button>
+            </div>
+          </div>
+          <div class="card-footer"></div>
+        </div>
+        <div class="card">
+          <img
+            src="images/Musee_salakta_12.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Funerary and Cult Figurines</h5>
+            <p class="card-text">
+              These figurines, displayed in a display case at the Salakta
+              Museum, reflect the spiritual beliefs of the time. Often used in
+              funerary or ritual contexts, they are a testament to local
+              craftsmanship.
+            </p>
+            <div class="card-cont">
+              <button>
+                <a
+                  href="https://www.facebook.com/photo/?fbid=122122886390190753&set=pcb.122122875902190753"
+                  >Read More</a
+                >
+              </button>
+            </div>
+          </div>
+          <div class="card-footer"></div>
+        </div>
+      </div>
+    </main>
+<footer>
+  <div class="info">
+    <h3>Company</h3>
+    <ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">contact us</a></li>
+    </ul>
+  </div>
+  <div class="info">
+    <h3>Contact</h3>
+    <ul>
+      <li>
+        <a href="#"
+          ><span>Adress:</span>ministry of culture,March 2, 1934 Street,
+          Tunis</a
+        >
+      </li>
+      <li>
+        <a href="#"><span>Fax:</span>+216 71 563 006</a>
+      </li>
+      <li>
+        <a href="#"><span>Horaires:</span>08:30–17:30</a>
+      </li>
+    </ul>
+  </div>
+  <div class="info">
+    <h3>Follow us</h3>
+    <div class="media">
+      <a
+        href="https://www.facebook.com/share/1BfQY7Nysi/?mibextid=wwXIfr"
+        id="fb"
+        ><i class="fa-brands fa-facebook"></i
+      ></a>
+      <a
+        href="https://www.instagram.com/ministere_de_la_culture?igsh=MXM4eWc1ZGw4OGZkcw=="
+        id="ins"
+        ><i class="fa-brands fa-instagram"></i
+      ></a>
+      <a
+        href="https://youtube.com/@culturegovtn1840?si=2UnhYDuKsu_VWOJj"
+        id="yt"
+        ><i class="fa-brands fa-youtube"></i
+      ></a>
+    </div>
+  </div>
+</footer>
+
+    <script>
+      const chatWindow = document.getElementById("chat-window");
+      const userInput = document.getElementById("user-input");
+      const sendBtn = document.getElementById("send-btn");
+      const chatContainer = document.getElementById("chat-container");
+      const chatBtn = document.getElementById("chat-btn");
+      const ratingContainer = document.getElementById("rating-container");
+      const stars = document.querySelectorAll(".star");
+      const ratingMessage = document.querySelector(".rating-message");
+      const voiceBtn = document.getElementById("voice-btn");
+      let recognition;
+
+      const greetings = {
+        en: ["hello", "hi", "welcome"],
+        fr: ["bonjour", "salut", "bienvenue"],
+      };
+      const farewells = {
+        en: ["bye", "goodbye", "see you", "thank you", "thanks", "nice"],
+        fr: ["au revoir", "à bientôt", "adieu", "merci"],
+      };
+      chatBtn.addEventListener("click", () => {
+        // Supprimer le calcul de position basé sur le bouton
+        if (chatContainer.style.display === "none") {
+          chatContainer.style.display = "block";
+          // Reset de la position
+          chatContainer.style.left = "";
+          chatContainer.style.top = "";
+        } else {
+          chatContainer.style.display = "none";
+        }
+      });
+
+      sendBtn.addEventListener("click", () => {
+        const question = userInput.value
+          .trim()
+          .toLowerCase()
+          .replace(/[.,\/#!$%^&*;:{}=_`~()?]/g, ""); // Supprime la ponctuation
+        if (!question) return;
+
+        addMessage(question, "user-message");
+
+        if (isGreeting(question)) {
+          addMessage(getWelcomeResponse(question), "bot-message");
+        } else if (isFarewell(question)) {
+          addMessage(getFarewellResponse(question), "bot-message");
+        } else {
+          fetch("http://localhost:3000/chatbot", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ question }),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              addMessage(data.response, "bot-message");
+            })
+            .catch(() => {
+              addMessage(
+                "Erreur : Impossible de contacter le serveur.",
+                "bot-message"
+              );
+            });
+        }
+
+        userInput.value = "";
+
+        ratingContainer.style.display = "flex";
+      });
+
+      function addMessage(text, className) {
+        const message = document.createElement("div");
+        message.className = `message ${className}`;
+        message.textContent = text;
+        chatWindow.appendChild(message);
+
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+      }
+
+      function isGreeting(message) {
+        return (
+          greetings.en.includes(message.toLowerCase()) ||
+          greetings.fr.includes(message.toLowerCase())
+        );
+      }
+
+      function isFarewell(message) {
+        return (
+          farewells.en.includes(message.toLowerCase()) ||
+          farewells.fr.includes(message.toLowerCase())
+        );
+      }
+
+      function getWelcomeResponse(message) {
+        if (greetings.en.includes(message.toLowerCase())) {
+          return "Hello! How can I assist you today? 😊";
+        } else if (greetings.fr.includes(message.toLowerCase())) {
+          return "Bonjour ! Comment puis-je vous aider aujourd'hui ? 😊";
+        }
+      }
+
+      function getFarewellResponse(message) {
+        if (farewells.en.includes(message.toLowerCase())) {
+          return "Goodbye! Have a great day! 👋";
+        } else if (farewells.fr.includes(message.toLowerCase())) {
+          return "Au revoir ! Passez une excellente journée ! 👋";
+        }
+      }
+
+      stars.forEach((star) => {
+        star.addEventListener("click", (e) => {
+          const value = e.target.dataset.value;
+
+          stars.forEach((s) => {
+            s.classList.remove("selected");
+            if (s.dataset.value <= value) {
+              s.classList.add("selected");
+            }
+          });
+
+          ratingMessage.textContent = `Merci pour votre note de ${value} étoile(s) !`;
+        });
+      });
+      // Vérification de la compatibilité du navigateur
+      if (
+        "SpeechRecognition" in window ||
+        "webkitSpeechRecognition" in window
+      ) {
+        const SpeechRecognition =
+          window.SpeechRecognition || window.webkitSpeechRecognition;
+        recognition = new SpeechRecognition();
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.lang = "fr-FR";
+
+        recognition.onstart = () => {
+          voiceBtn.classList.add("listening");
+        };
+
+        recognition.onresult = (event) => {
+          const transcript = event.results[0][0].transcript;
+          userInput.value = transcript;
+        };
+
+        recognition.onerror = (event) => {
+          console.error("Erreur de reconnaissance vocale:", event.error);
+        };
+
+        recognition.onend = () => {
+          voiceBtn.classList.remove("listening");
+        };
+      } else {
+        console.warn("Reconnaissance vocale non supportée par ce navigateur");
+        voiceBtn.disabled = true;
+      }
+
+      voiceBtn.addEventListener("click", () => {
+        if (voiceBtn.classList.contains("listening")) {
+          recognition.stop();
+        } else {
+          recognition.start();
+        }
+      });
+
+      // Optionnel: Envoi automatique après dictée
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        userInput.value = transcript;
+        sendBtn.click(); // Envoi automatique
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

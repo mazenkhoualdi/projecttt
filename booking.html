@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking</title>
+    <link rel="stylesheet" href="booking.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <a href=""
+        ><img
+          src="images/Musée-Salakta-2-removebg-preview.png"
+          alt="404"
+          style="width: 20%"
+          class="logo"
+      /></a>
+      <nav>
+        <ul id="list">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li>
+            <a href="login.html"><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li>
+            <a href="shop.html"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <img id="img-back" src="images/reservation back.png" alt="" />
+    <div class="container">
+      <h1>Visit Reservation</h1>
+
+      <form id="bookingForm">
+        <div class="form-group">
+          <label for="visitDate">Date of visit</label>
+          <input type="date" id="visitDate" required />
+        </div>
+
+        <div class="ticket-types">
+          <div class="ticket-type">
+            <div>
+              <h3>Adult</h3>
+              <p>5DT per person</p>
+            </div>
+            <div class="ticket-controls">
+              <button type="button" onclick="adjustTicket('adult', -1)">
+                -
+              </button>
+              <input
+                type="number"
+                id="adult"
+                value="0"
+                min="0"
+                max="10"
+                data-price="5"
+              />
+              <button type="button" onclick="adjustTicket('adult', 1)">
+                +
+              </button>
+            </div>
+          </div>
+
+          <div class="ticket-type">
+            <div>
+              <h3>Student</h3>
+              <p>4DT (on presentation of card)</p>
+            </div>
+            <div class="ticket-controls">
+              <button type="button" onclick="adjustTicket('student', -1)">
+                -
+              </button>
+              <input
+                type="number"
+                id="student"
+                value="0"
+                min="0"
+                max="10"
+                data-price="4"
+              />
+              <button type="button" onclick="adjustTicket('student', 1)">
+                +
+              </button>
+            </div>
+          </div>
+
+          <div class="ticket-type">
+            <div>
+              <h3>Enfant (6-12 ans)</h3>
+              <p>2DT per person</p>
+            </div>
+            <div class="ticket-controls">
+              <button type="button" onclick="adjustTicket('child', -1)">
+                -
+              </button>
+              <input
+                type="number"
+                id="child"
+                value="0"
+                min="0"
+                max="10"
+                data-price="2"
+              />
+              <button type="button" onclick="adjustTicket('child', 1)">
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="price-summary">
+          <div class="price-item">
+            <span>Total Adult</span>
+            <span id="adultTotal">0DT</span>
+          </div>
+          <div class="price-item">
+            <span>Total Student</span>
+            <span id="studentTotal">0DT</span>
+          </div>
+          <div class="price-item">
+            <span>Total Child</span>
+            <span id="childTotal">0DT</span>
+          </div>
+          <div class="price-item total-price">
+            <span>Grand Total</span>
+            <span id="grandTotal">0DT</span>
+          </div>
+        </div>
+
+        <button type="submit">Confirm reservation</button>
+      </form>
+
+      <div class="receipt" id="receipt">
+        <img
+          id="img-back"
+          src="images/reservation back.png"
+          alt="Fond décoratif"
+        />
+        <div class="receipt-header">
+          <h2>Salakta Museum</h2>
+          <p>Reservation Receipt</p>
+          <p id="receiptReference"></p>
+        </div>
+
+        <div class="receipt-details">
+          <div>
+            <span>Date of visit:</span>
+            <span id="receiptDate"></span>
+          </div>
+          <div>
+            <span>Adults:</span>
+            <span id="receiptAdult"></span>
+          </div>
+          <div>
+            <span>Students:</span>
+            <span id="receiptStudent"></span>
+          </div>
+          <div>
+            <span>Children:</span>
+            <span id="receiptChild"></span>
+          </div>
+          <div>
+            <span>Total Paid:</span>
+            <span id="receiptTotal"></span>
+          </div>
+        </div>
+
+        <button onclick="printReceipt()" class="print-btn">
+          Print receipt
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function adjustTicket(type, delta) {
+        const input = document.getElementById(type);
+        let value = parseInt(input.value) + delta;
+        input.value = Math.max(0, Math.min(10, value));
+        calculateTotal();
+      }
+      function printReceipt() {
+        const originalContents = document.body.innerHTML;
+        const receiptContent = document.getElementById("receipt").outerHTML;
+
+        document.body.innerHTML = receiptContent;
+        window.print();
+
+        document.body.innerHTML = originalContents;
+        document.getElementById("receipt").style.display = "block";
+        document.getElementById("bookingForm").style.display = "none";
+      }
+      function calculateTotal() {
+        const tickets = [
+          { id: "adult", price: 5 },
+          { id: "student", price: 4 },
+          { id: "child", price: 2 },
+        ];
+
+        let grandTotal = 0;
+
+        tickets.forEach((ticket) => {
+          const quantity = parseInt(document.getElementById(ticket.id).value);
+          const total = quantity * ticket.price;
+          document.getElementById(
+            `${ticket.id}Total`
+          ).textContent = `${total}DT`;
+          grandTotal += total;
+        });
+
+        document.getElementById("grandTotal").textContent = `${grandTotal}DT`;
+      }
+
+      document.getElementById("bookingForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const adults = parseInt(document.getElementById("adult").value);
+        const students = parseInt(document.getElementById("student").value);
+        const children = parseInt(document.getElementById("child").value);
+
+        if (adults + students + children === 0) {
+          alert("Veuillez sélectionner au moins un billet");
+          return;
+        }
+
+        // Récupération des données
+        const adultPrice = parseInt(
+          document.getElementById("adult").dataset.price
+        );
+        const studentPrice = parseInt(
+          document.getElementById("student").dataset.price
+        );
+        const childPrice = parseInt(
+          document.getElementById("child").dataset.price
+        );
+        const total =
+          adults * adultPrice + students * studentPrice + children * childPrice;
+
+        // Génération du reçu
+        const receiptDate = document.getElementById("visitDate").value;
+        const receiptReference =
+          "REF-" + Math.random().toString(36).substr(2, 9).toUpperCase();
+
+        document.getElementById("receiptDate").textContent = receiptDate;
+        document.getElementById(
+          "receiptAdult"
+        ).textContent = `${adults} x ${adultPrice}DT = ${
+          adults * adultPrice
+        }DT`;
+        document.getElementById(
+          "receiptStudent"
+        ).textContent = `${students} x ${studentPrice}DT = ${
+          students * studentPrice
+        }DT`;
+        document.getElementById(
+          "receiptChild"
+        ).textContent = `${children} x ${childPrice}DT = ${
+          children * childPrice
+        }DT`;
+        document.getElementById("receiptTotal").textContent = `${total}DT`;
+        document.getElementById(
+          "receiptReference"
+        ).textContent = `Référence: ${receiptReference}`;
+
+        document.getElementById("bookingForm").style.display = "none";
+        document.getElementById("receipt").style.display = "block";
+      });
+
+      // Configuration du datepicker
+      const today = new Date().toISOString().split("T")[0];
+      document.getElementById("visitDate").min = today;
+
+      // Initial calculation
+      calculateTotal();
+    </script>
+    <footer>
+      <div class="info">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">contact us</a></li>
+        </ul>
+      </div>
+      <div class="info">
+        <h3>Contact</h3>
+        <ul>
+          <li>
+            <a href="#"
+              ><span>Adress:</span>ministry of culture,March 2, 1934 Street,
+              Tunis</a
+            >
+          </li>
+          <li>
+            <a href="#"><span>Fax:</span>+216 71 563 006</a>
+          </li>
+          <li>
+            <a href="#"><span>Horaires:</span>08:30–17:30</a>
+          </li>
+        </ul>
+      </div>
+      <div class="info">
+        <h3>Follow us</h3>
+        <div class="media">
+          <a
+            href="https://www.facebook.com/share/1BfQY7Nysi/?mibextid=wwXIfr"
+            id="fb"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/ministere_de_la_culture?igsh=MXM4eWc1ZGw4OGZkcw=="
+            id="ins"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            href="https://youtube.com/@culturegovtn1840?si=2UnhYDuKsu_VWOJj"
+            id="yt"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

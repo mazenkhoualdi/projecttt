@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shop</title>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="shop.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <header>
+      <a href=""
+        ><img
+          src="images/Musée-Salakta-2-removebg-preview.png"
+          alt="404"
+          style="width: 20%"
+          class="logo"
+      /></a>
+      <nav>
+        <ul id="list">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li>
+            <a href="login.html"><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-toggle="modal"
+              data-target="#cart"
+            >
+              <i class="fa-solid fa-cart-shopping"></i> (<span
+                class="total-count"
+              ></span
+              >)
+            </button>
+          </li>
+          <li>
+            <button class="clear-cart btn btn-danger">
+              <i class="fa-solid fa-x"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main -->
+    <div class="shop-back">
+      <div class="mini-titles">
+        <h1>enjoy experience</h1>
+        <h4>with us</h4>
+      </div>
+    </div>
+    <div class="container">
+      <div class="products">
+        <div class="prd">
+          <a href="#">
+            <model-viewer
+              src="models/Marble_Serenity_0516160117_texture.glb"
+              alt="Casque gaming 3D"
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              environment-image="neutral"
+              shadow-intensity="1"
+              style="width: 100%; height: 250px"
+              loading="lazy"
+            >
+              <button slot="ar-button" class="ar-button">Voir en AR</button>
+              <div class="progress-bar" slot="progress-bar"></div>
+            </model-viewer>
+            <div class="money">
+              <h4>7DT</h4>
+              <a
+                href="#"
+                data-name="Marble_Serenity"
+                data-price="7"
+                class="add-to-cart btn btn-primary"
+                >Add to cart</a
+              >
+            </div>
+          </a>
+        </div>
+        <div class="prd">
+          <a href="#">
+            <model-viewer
+              src="models/Statue_Duo_0516155207_texture.glb"
+              alt="Casque gaming 3D"
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              environment-image="neutral"
+              shadow-intensity="1"
+              style="width: 100%; height: 250px"
+              loading="lazy"
+            >
+              <button slot="ar-button" class="ar-button">Voir en AR</button>
+              <div class="progress-bar" slot="progress-bar"></div>
+            </model-viewer>
+            <div class="money">
+              <h4>8DT</h4>
+              <a
+                href="#"
+                data-name="Statue_Duo"
+                data-price="8"
+                class="add-to-cart btn btn-primary"
+                >Add to cart</a
+              >
+            </div>
+          </a>
+        </div>
+        <div class="prd">
+          <a href="#">
+            <model-viewer
+              src="models/Ancient_Guardian_Stat_0516144711_texture.glb"
+              alt="Casque gaming 3D"
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              environment-image="neutral"
+              shadow-intensity="1"
+              style="width: 100%; height: 250px"
+              loading="lazy"
+            >
+              <button slot="ar-button" class="ar-button">Voir en AR</button>
+              <div class="progress-bar" slot="progress-bar"></div>
+            </model-viewer>
+            <div class="money">
+              <h4>7DT</h4>
+              <a
+                href="#"
+                data-name="Ancient_Guardian"
+                data-price="7"
+                class="add-to-cart btn btn-primary"
+                >Add to cart</a
+              >
+            </div>
+          </a>
+        </div>
+        <div class="prd">
+          <a href="#">
+            <model-viewer
+              src="models/Marble_Philosopher_0516155147_texture.glb"
+              alt="Casque gaming 3D"
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              environment-image="neutral"
+              shadow-intensity="1"
+              style="width: 100%; height: 250px"
+              loading="lazy"
+            >
+              <button slot="ar-button" class="ar-button">Voir en AR</button>
+              <div class="progress-bar" slot="progress-bar"></div>
+            </model-viewer>
+            <div class="money">
+              <h4>9DT</h4>
+              <a
+                href="#"
+                data-name="Marble_Philosopher"
+                data-price="9"
+                class="add-to-cart btn btn-primary"
+                >Add to cart</a
+              >
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="products">
+        <div class="prd">
+          <a href="#">
+            <model-viewer
+              src="models/Mosaic_Symbol_0516162246_texture.glb"
+              alt="Casque gaming 3D"
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              environment-image="neutral"
+              shadow-intensity="1"
+              style="width: 100%; height: 250px"
+              loading="lazy"
+            >
+              <button slot="ar-button" class="ar-button">Voir en AR</button>
+              <div class="progress-bar" slot="progress-bar"></div>
+            </model-viewer>
+            <div class="money">
+              <h4>15DT</h4>
+              <a
+                href="#"
+                data-name="Mosaic_Symbol"
+                data-price="15"
+                class="add-to-cart btn btn-primary"
+                >Add to cart</a
+              >
+            </div>
+          </a>
+        </div>
+        <div class="prd">
+          <a href="#">
+            <model-viewer
+              src="models/mazen1.glb"
+              alt="Casque gaming 3D"
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              environment-image="neutral"
+              shadow-intensity="1"
+              style="width: 100%; height: 250px"
+              loading="lazy"
+            >
+              <button slot="ar-button" class="ar-button">Voir en AR</button>
+              <div class="progress-bar" slot="progress-bar"></div>
+            </model-viewer>
+            <div class="money">
+              <h4>12DT</h4>
+              <a
+                href="#"
+                data-name="Mosaic-m"
+                data-price="12"
+                class="add-to-cart btn btn-primary"
+                >Add to cart</a
+              >
+            </div>
+          </a>
+        </div>
+        <div class="prd">
+          <a href="#">
+            <model-viewer
+              src="models/mazen 2 .glb"
+              alt="Casque gaming 3D"
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              environment-image="neutral"
+              shadow-intensity="1"
+              style="width: 100%; height: 250px"
+              loading="lazy"
+            >
+              <button slot="ar-button" class="ar-button">Voir en AR</button>
+              <div class="progress-bar" slot="progress-bar"></div>
+            </model-viewer>
+            <div class="money">
+              <h4>17DT</h4>
+              <a
+                href="#"
+                data-name="shield"
+                data-price="17"
+                class="add-to-cart btn btn-primary"
+                >Add to cart</a
+              >
+            </div>
+          </a>
+        </div>
+        <div class="prd">
+          <a href="#">
+            <model-viewer
+              src="models/mazen3.glb"
+              alt="Casque gaming 3D"
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              environment-image="neutral"
+              shadow-intensity="1"
+              style="width: 100%; height: 250px"
+              loading="lazy"
+            >
+              <button slot="ar-button" class="ar-button">Voir en AR</button>
+              <div class="progress-bar" slot="progress-bar"></div>
+            </model-viewer>
+            <div class="money">
+              <h4>80DT</h4>
+              <a
+                href="#"
+                data-name="pottery"
+                data-price="80"
+                class="add-to-cart btn btn-primary"
+                >Add to cart</a
+              >
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="products">
+        <div class="prd">
+          <a href="#">
+            <model-viewer
+              src="models/mazen44 .glb"
+              alt="Casque gaming 3D"
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              environment-image="neutral"
+              shadow-intensity="1"
+              style="width: 100%; height: 250px"
+              loading="lazy"
+            >
+              <button slot="ar-button" class="ar-button">Voir en AR</button>
+              <div class="progress-bar" slot="progress-bar"></div>
+            </model-viewer>
+            <div class="money">
+              <h4>35DT</h4>
+              <a
+                href="#"
+                data-name="game-card"
+                data-price="35"
+                class="add-to-cart btn btn-primary"
+                >Add to cart</a
+              >
+            </div>
+          </a>
+        </div>
+        <div class="prd">
+          <a href="#">
+            <img
+              src="models/khrafa.png"
+              alt=""
+              style="width: 170px; margin-bottom: 40px"
+            />
+            <div class="money">
+              <h4>15DT</h4>
+              <a
+                href="#"
+                data-name="khrafa"
+                data-price="15"
+                class="add-to-cart btn btn-primary"
+                >Add to cart</a
+              >
+            </div>
+          </a>
+        </div>
+        <div class="prd">
+          <a href="#">
+            <img src="models/sticker1.png" alt="" style="width: 170px; margin-bottom: 40px">
+            <div class="money">
+              <h4>2DT</h4>
+              <a
+                href="#"
+                data-name="sticker1"
+                data-price="2"
+                class="add-to-cart btn btn-primary"
+                >Add to cart</a
+              >
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="cart"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+          </div>
+          <div class="modal-body">
+            <table class="show-cart table"></table>
+            <div id="flous">
+              Total price: <span class="total-cart"></span>DT
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              style="color: rgb(0, 0, 0)"
+              class="btn btn-primary"
+              onclick="alt()"
+            >
+              Order now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="info">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">contact us</a></li>
+        </ul>
+      </div>
+      <div class="info">
+        <h3>Contact</h3>
+        <ul>
+          <li>
+            <a href="#"
+              ><span>Adress:</span>ministry of culture,March 2, 1934 Street,
+              Tunis</a
+            >
+          </li>
+          <li>
+            <a href="#"><span>Fax:</span>+216 71 563 006</a>
+          </li>
+          <li>
+            <a href="#"><span>Horaires:</span>08:30–17:30</a>
+          </li>
+        </ul>
+      </div>
+      <div class="info">
+        <h3>Follow us</h3>
+        <div class="media">
+          <a
+            href="https://www.facebook.com/share/1BfQY7Nysi/?mibextid=wwXIfr"
+            id="fb"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/ministere_de_la_culture?igsh=MXM4eWc1ZGw4OGZkcw=="
+            id="ins"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            href="https://youtube.com/@culturegovtn1840?si=2UnhYDuKsu_VWOJj"
+            id="yt"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet prefetch"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+    />
+    <link
+      rel="stylesheet prefetch"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet prefetch"
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:100"
+    />
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <link rel="stylesheet" href="css/splitslick/style.css" />
+    <link rel="stylesheet" href="css/featprod/style.css" />
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="shop.js"></script>
+  </body>
+</html>
